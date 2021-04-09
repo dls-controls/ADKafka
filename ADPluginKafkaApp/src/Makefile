@@ -19,21 +19,25 @@ LIB_SRCS += jsoncpp.cpp
 DBD += ADPluginKafka.dbd
 
 LIB_LIBS += NDPlugin
-LIB_LIBS += rdkafka++ rdkafka
+#LIB_LIBS += rdkafka++ rdkafka
+
+LDFLAGS += -lrdkafka
+LDFLAGS += -lrdkafka++
+
 
 USR_CXXFLAGS_Linux += -std=c++11
-USR_CXXFLAGS += -I${AREA_DETECTOR}/ADCore/include
+USR_CXXFLAGS += -I${ADCORE}/include
 
 ifneq ($(findstring static,$(EPICS_HOST_ARCH)),)
 USR_CXXFLAGS_WIN32 += -DLIBRDKAFKA_STATICLIB
 endif
 
-include $(ADCORE)/ADApp/commonLibraryMakefile
+#include $(ADCORE)/ADApp/commonLibraryMakefile
 
 
 include $(TOP)/configure/RULES
 #----------------------------------------
 #  ADD EXTRA GNUMAKE RULES BELOW HERE
 
-$(COMMON_DIR)/NDArray_schema_generated.h : ../NDArray_schema.fbs $(FLATBUFFERS)/include/flatbuffers/flatbuffers.h
-	$(FLATBUFFERS)/bin/$(EPICS_HOST_ARCH)/flatc --cpp -o $(COMMON_DIR)/ $<
+#$(COMMON_DIR)/NDArray_schema_generated.h : ../NDArray_schema.fbs $(FLATBUFFERS)/include/flatbuffers/flatbuffers.h
+#	$(FLATBUFFERS)/bin/$(EPICS_HOST_ARCH)/flatc --cpp -o $(COMMON_DIR)/ $<

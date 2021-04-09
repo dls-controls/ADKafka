@@ -3,7 +3,7 @@ TOP = .
 include $(TOP)/configure/CONFIG
 
 DIRS := $(DIRS) $(filter-out $(DIRS), configure)
-DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard *App))
-DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard AD*))
+DIRS := $(DIRS) $(filter-out $(DIRS), ADPluginKafkaApp)
+#DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard AD*))
 
 include $(TOP)/configure/RULES_TOP
