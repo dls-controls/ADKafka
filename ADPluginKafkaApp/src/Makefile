@@ -32,7 +32,7 @@ ifneq ($(findstring static,$(EPICS_HOST_ARCH)),)
 USR_CXXFLAGS_WIN32 += -DLIBRDKAFKA_STATICLIB
 endif
 
-#include $(ADCORE)/ADApp/commonLibraryMakefile
+include $(ADCORE)/ADApp/commonLibraryMakefile
 
 
 include $(TOP)/configure/RULES
