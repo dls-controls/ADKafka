@@ -9,6 +9,8 @@
 #% macro, ADDR, Asyn Port address
 #% macro, NDARRAY_PORT, NDArray port
 
+# % gui, $(PORT), edmtab, ADKafkaPlugin.edl, device=$(P)$(R), P=$(P), R=$(R), PORT=$(PORT)
+
 include "NDPluginBase.template"
 
 record(longin, "$(P)$(R)UnsentPackets_RBV") #Integer in from device
