@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
-	<ADSimDetector.simDetector ADDR="0" HEIGHT="200" P="YSX26594" PORT="YSX26594SIMDET" R=":CAM:" TIMEOUT="1" WIDTH="200"/>
-	<ADKafkaPlugin.KafkaPlugin ADDR="0" BROKER_ADDR="kafka-0.kafka-headless.slg25752.svc.cluster.local:9092" NDARRAY_PORT="YSX26594SIMDET" P="YSX26594" PORT="YSX26594K" R=":KFK:" TIMEOUT="1" TOPIC="sim_data_topic"/>
+	<ADSimDetector.simDetector ADDR="0" HEIGHT="4104" P="YSX26594" PORT="YSX26594SIMDET" R=":CAM:" TIMEOUT="1" WIDTH="4128"/>
+	<ADKafkaPlugin.KafkaPlugin ADDR="0" BROKER_ADDR="172.23.168.20:30006" NDARRAY_PORT="YSX26594SIMDET" P="YSX26594" PORT="YSX26594K" R=":KFK:" TIMEOUT="1" TOPIC="ula_topic"/>
 	<EPICS_BASE.dbpf pv="YSX26594:KFK:EnableCallbacks" value="Enable"/>
 	<EPICS_BASE.dbpf pv="YSX26594:CAM:AcquirePeriod" value="2"/>
 	<!--<EPICS_BASE.dbpf pv="YSX26594:CAM:Acquire" value="1"/>-->

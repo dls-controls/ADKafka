@@ -233,9 +233,9 @@ protected:
   int flushTimeout{500}; /// @brief What is the timeout of the flush attempt?
 
   size_t maxMessageSize{
-      10000000}; /// @brief Stored maximum message size in bytes.
+      100000000}; /// @brief Stored maximum message size in bytes.
   size_t maxMessageBufferSizeKb{
-      500000};      /// @brief Message buffer size in kilo bytes.
+      5000000};      /// @brief Message buffer size in kilo bytes.
   int msgQueueSize; /// @brief Stored maximum Kafka producer queue length.
 
   /** @brief Helper function for cleanly shutting down a topic.
